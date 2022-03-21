@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Portal from './portal'
 
 const VideoModal = () => {
@@ -12,11 +12,10 @@ const VideoModal = () => {
     setVisible(false)
   }
 
-  const handleEscapePress = (e) => {
+  const handleEscapePress = useCallback((e) => {
     if (e.keyCode !== 27) return
-
-    closeModal()
-  }
+    setVisible(false)
+  }, [])
 
   useEffect(() => {
     if (visible) document.body.style.overflow = 'hidden'

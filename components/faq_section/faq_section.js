@@ -90,6 +90,7 @@ const FaqSection = forwardRef((_, ref) => {
                 layout='intrinsic'
                 width={1920}
                 height={1080}
+                alt='multiple-drone'
               />
             </div>
           </motion.div>
