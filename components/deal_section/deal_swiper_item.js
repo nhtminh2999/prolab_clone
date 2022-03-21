@@ -1,13 +1,17 @@
+import Image from 'next/image'
 import CountDown from "../countdown"
 import StarRating from "../start_rating"
 
 const DealSwiperItem = ({ imagePath, name, desc, salePrice, originPrice, endDate, rating = 5 }) => {
   return (
     <div className="grid grid-cols-1 gap-y-[30px] lg:grid-cols-2 mx-[-15px]">
-      <div className="flex px-[15px] items-center justify-center">
-        <div>
-          <img src={imagePath} alt={name} />
-        </div>
+      <div className="flex pb-[50%] px-[15px] items-center justify-center relative lg:pb-0">
+        <Image
+          layout='fill'
+          src={imagePath}
+          alt={name}
+          objectFit='scale-down'
+        />
       </div>
       <div className="px-[15px]">
         <StarRating rating={rating} />

@@ -1,9 +1,17 @@
+import Image from 'next/image'
 
 const FeedbackSwiperItem = ({ imagePath, name, title, feedback }) => {
   return (
     <div className='client'>
       <div className='client-image'>
-        <img src={imagePath} alt={name} />
+        <div className='relative h-full w-full'>
+          <Image
+            layout='fill'
+            src={imagePath}
+            alt={name}
+            objectFit='scale-down'
+          />
+        </div>
       </div>
       <p className='mb-[19px] text-base leading-[1.625] text-[#555]'>
         {feedback}

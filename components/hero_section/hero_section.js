@@ -10,7 +10,7 @@ const HeroSection = forwardRef((_, ref) => {
       <Image
         layout='fill'
         src='/heroarea.jpg'
-        alt='logo'
+        alt='hero-area'
         objectFit='cover'
       />
       <div className='absolute left-0 bottom-0 w-full

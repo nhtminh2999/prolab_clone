@@ -71,7 +71,7 @@ const FeatureSection = forwardRef((_, ref) => {
               <Image
                 layout='fill'
                 src='/drone2.jpg'
-                alt='logo'
+                alt='drone-2'
                 objectFit='scale-down'
               />
             </div>

@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, memo } from 'react'
 import Link from "next/link"
+import Image from 'next/image'
 
 const isInViewport = (el) => {
   const { height } = el.getBoundingClientRect();
@@ -97,8 +98,14 @@ const Header = ({ sectionRefs }) => {
         <div className="mx-[-15px]">
           <nav className="flex flex-wrap items-center justify-between px-[15px] py-[6px] lg:p-0">
             <Link href='/'>
-              <a className="block text-[30px] font-bold leading-[50px] lg:mt-[-2px] uppercase">
-                <img src='/logo-color.png' alt='prolab-logo' className={`max-w-[170px] ${isScrolled ? '' : 'lg:brightness-0 lg:invert'}`} />
+              <a className="block relative text-[30px] w-[154px] h-10 font-bold leading-[50px] lg:mt-[-2px] uppercase">
+                <Image
+                  layout='fill'
+                  src='/logo-color.png'
+                  alt='prolab-logo'
+                  objectFit='contain'
+                  className={`max-w-[170px] ${isScrolled ? '' : 'lg:brightness-0 lg:invert'}`}
+                />
               </a>
             </Link>
             <MenuLogo onClick={handleShowMobileMenu} show={show} />

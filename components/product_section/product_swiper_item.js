@@ -10,7 +10,7 @@ const ProductSwiperitem = ({ imagePath, name, rating = 5, salePrice = 0, origina
         <Image
           layout='fill'
           src={imagePath}
-          alt='logo'
+          alt={name}
           objectFit='contain'
         />
         {/* <img src={imagePath} alt={name} /> */}

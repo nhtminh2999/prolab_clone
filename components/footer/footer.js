@@ -7,7 +7,7 @@ const FooterLogo = () => {
       <a>
         <div className='inline-block relative w-[154px] h-10'>
           <Image
-            objectFit='contain'
+            objectFit='scale-down'
             alt='logo'
             src='/logo-color.png'
             layout='fill'
