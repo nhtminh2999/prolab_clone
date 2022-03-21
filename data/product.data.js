@@ -1,0 +1,42 @@
+export const productData = [
+  {
+    id: 1,
+    imagePath: '/mydrone1.png',
+    rating: 4.5,
+    name: 'Drone 1',
+    salePrice: 99,
+    originalPrice: 250,
+  },
+  {
+    id: 2,
+    imagePath: '/mydrone2.png',
+    rating: 4.4,
+    name: 'Drone 2',
+    salePrice: 100,
+    originalPrice: 300,
+  },
+  {
+    id: 3,
+    imagePath: '/mydrone3.png',
+    rating: 3.4,
+    name: 'Drone 3',
+    salePrice: 110,
+    originalPrice: 200,
+  },
+  {
+    id: 4,
+    imagePath: '/mydrone4.png',
+    rating: 4.4,
+    name: 'Drone 4',
+    salePrice: 99,
+    originalPrice: 250,
+  },
+  {
+    id: 5,
+    imagePath: '/mydrone5.png',
+    rating: 5,
+    name: 'Drone 5',
+    salePrice: 100,
+    originalPrice: 300,
+  },
+]

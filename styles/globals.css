@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-roboto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  .link-item {
+    @apply inline-block lg:block relative px-[10px] py-[10px] lg:py-[25px] leading-[26px] font-semibold text-[16px];
+  }
+  .link-item::before {
+    width: calc(100% - 20px);
+    @apply absolute content-[''] left-[10px] bottom-0 h-[3px] opacity-0 
+      bg-main scale-0 transition-all ease-in-out duration-500;
+  }
+  .link-item.active::before,
+  .link-item:hover::before {
+    @apply scale-100 opacity-100;
+  }
+  .menu-icon {
+    @apply flex justify-between flex-col w-[32px] h-[20px] lg:hidden;
+  }
+  .menu-icon span {
+    @apply block w-[30px] h-[2px] bg-[#1e1e1e] first:w-[75%] last:w-[75%] transition-all duration-[0.4s];
+  }
+  .active span {
+    @apply hidden transition-all duration-[0.4s] 
+      first:translate-y-[6px] first:translate-x-[1px] first:rotate-[45deg] first:w-[100%] first:block
+      last:translate-y-[-11px] last:translate-x-[1px] last:rotate-[-45deg] last:w-[100%] last:block;
+  }
+  .dropdown-menu {
+    @apply hidden p-0 mt-0 top-[100%] left-0 min-w-[10rem] 
+      text-left bg-white bg-clip-padding invisible opacity-0
+      lg:block lg:absolute lg:group-hover:visible lg:group-hover:opacity-100
+      lg:shadow-main;
+  }
+  .dropdown-item {
+    @apply px-[15px] py-[8px] text-[15px] text-black font-semibold 
+      lg:border-b-[1px] lg:border-solid lg:border-b-black-100 lg:cursor-pointer
+      transition-all ease-in duration-300
+      hover:bg-[#d43f8d] hover:text-white;
+  }
+  .active .dropdown-menu {
+    @apply visible opacity-100 block lg:invisible lg:opacity-0;
+  }
+
+  .btn {
+    @apply relative text-[14px] uppercase font-semibold w-[160px] h-[50px] leading-[50px] text-center inline-block text-white
+      border-0 outline-none bg-white-200 transition-all duration-300 overflow-hidden
+      hover:before:translate-x-[-50%] hover:before:delay-200
+      hover:after:translate-x-[-41%] hover:after:delay-[0s];
+  }
+  .btn::before {
+    @apply absolute content-[''] left-0 top-0 w-[180%] h-[490%] bg-[#d43f8d] transition-all duration-300 ease-linear
+      translate-x-[-160%] translate-y-[-25%] rotate-[45deg] z-[1];
+  }
+  .btn::after {
+    @apply absolute content-[''] left-0 top-0 w-[180%] h-[490%] bg-[#0250c5] transition-all duration-300 delay-200 ease-linear
+      translate-x-[-140%] translate-y-[-25%] rotate-[45deg];
+  }
+  .btn.btn-secondary {
+    @apply text-black bg-secondary hover:text-white;
+  }
+  .icon i {
+    @apply bg-main bg-clip-text text-transparent;
+  }
+  .countdown-box {
+    @apply inline-block text-center shadow-countdown py-[5px] px-[14px] mr-[10px] font-bold text-[#242424] text-xl leading-6 rounded-[3px]
+      lg:text-2xl lg:py-2 lg:px-5 last:mr-0;
+  }
+  .countdown-box small {
+    @apply block text-sm leading-6 font-normal text-[#555];
+  }
+
+  .sale-price {
+    @apply text-[30px] leading-[30px] font-black bg-main bg-clip-text text-transparent;
+  }
+
+  .reason-box {
+    @apply bg-white pt-10 px-5 pb-[30px] text-center rounded-[3px] shadow-reason-box;
+  }
+  .box-icon {
+    @apply text-[45px] w-20 h-20 mx-auto relative leading-[80px]
+      after:absolute after:content-[''] after:w-full after:h-full after:border-[1px] after:border-dashed after:border-white
+      after:left-0 after:top-0 after:rounded-[50%] after:animate-spin-slow;
+  }
+  .box-icon i {
+    @apply leading-[80px];
+  }
+  .reason-box h5 {
+    @apply text-xl font-semibold mt-[25px];
+  }
+
+  .compare-table {
+    @apply block lg:table border-[1px] border-solid border-[#dee2e6] w-full max-w-full mb-4 bg-transparent overflow-x-scroll;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    @apply text-sm align-middle border-b-2 p-[0.75rem] border-[1px] border-solid border-[#dee2e6];
+  }
+
+  .compare-table th .product-image {
+    @apply py-[30px] px-[15px];
+  }
+
+  .compare-table th h3 {
+    @apply text-lg leading-7 mb-0 text-[#242424] font-medium;
+  }
+
+  .compare-table th p {
+    @apply text-sm leading-6 mb-0 text-[#555] font-normal;
+  }
+
+  .compare-table tbody th {
+    @apply w-[150px] text-[#242424] text-left;
+  }
+  .compare-table tbody td {
+    @apply text-center;
+  }
+  .compare-table tbody .sale-price {
+    @apply font-bold text-2xl;
+  }
+
+  .client {
+    @apply my-[65px] mx-[30px] pt-[85px] px-[30px] pb-[27px] text-center relative bg-white shadow-md;
+  }
+  .client-image {
+    @apply absolute w-[120px] h-[120px] p-[15px] top-[-60px] left-1/2 -translate-x-1/2 bg-main rounded-full;
+  }
+  .client-image img {
+    @apply rounded-full;
+  }
+
+  .panel {
+    @apply mb-5 bg-white relative shadow-md rounded-[3px]
+      after:absolute after:content-[''] after:w-1 after:h-full after:top-0 after:left-0 after:bg-main;
+  }
+
+  .panel-title {
+    @apply block bg-white  text-lg font-semibold text-[#242424] mb-0;
+  }
+
+  .panel-body {
+    @apply px-5 pt-1 pb-[7px];
+  }
+
+  .social-icon {
+    @apply inline-block w-[35px] h-[35px] rounded-full text-sm text-white text-center leading-9 shadow-sm mx-[3px];
+  }
+}
