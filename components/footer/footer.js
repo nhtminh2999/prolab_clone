@@ -77,7 +77,7 @@ const Footer = () => {
       </div>
       <div className='mt-[96px] md:mt-[100px] lg:mt-[110px] py-[20px] border-t-[1px] border-solid border-[#00000026]'>
         <p className='text-center'>
-          Copyright © 2020. All rights reserved by GeniusDevs
+          Copyright © 2022. All rights reserved by Nguyen Minh
         </p>
       </div>
     </footer>
