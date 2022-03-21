@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import StartRating from '../start_rating';
 
 const ProductSwiperitem = ({ imagePath, name, rating = 5, salePrice = 0, originalPrice = 0 }) => {
@@ -6,7 +7,13 @@ const ProductSwiperitem = ({ imagePath, name, rating = 5, salePrice = 0, origina
       <div className="flex justify-center items-center relative bg-[#d43f8d1a] py-0 px-[30px] h-[250px] overflow-hidden
             lg:pt-[30px] lg:pb-[24px]"
       >
-        <img src={imagePath} alt={name} />
+        <Image
+          layout='fill'
+          src={imagePath}
+          alt='logo'
+          objectFit='contain'
+        />
+        {/* <img src={imagePath} alt={name} /> */}
         <div className='flex justify-center items-center absolute top-full left-0 w-full h-full bg-black-500 transition-[top] duration-300 ease-in
           group-hover:top-0'>
           <button className='btn bg-white-800 text-black hover:text-white'>

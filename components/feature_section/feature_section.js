@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { forwardRef } from "react"
 import { motion } from "framer-motion"
 
@@ -65,9 +66,14 @@ const FeatureSection = forwardRef((_, ref) => {
               reverse={true}
             />
           </motion.div>
-          <div className="flex px-[15px] items-center justify-center">
+          <div className="flex px-[15px] pt-[55%] lg:py-0 items-center justify-center relative">
             <div>
-              <img src="/drone2.jpg" alt="drone-5" />
+              <Image
+                layout='fill'
+                src='/drone2.jpg'
+                alt='logo'
+                objectFit='scale-down'
+              />
             </div>
           </div>
           <motion.div

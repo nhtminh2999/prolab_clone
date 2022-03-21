@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { motion } from "framer-motion"
 
 const Item = ({ icon, title, desc }) => {
@@ -36,7 +37,7 @@ const ThirdSection = () => {
         after:border-b-[50px] after:lg:border-b-[80px] after:border-b-white'
       ></div>
       <div className="container">
-        <div className="mb-[55px] grid lg:grid-cols-2 gap-30px overflow-hidden">
+        <div className="mb-[55px] grid lg:grid-cols-2 gap-[30px] overflow-hidden">
           <motion.div
             initial={{ visibility: 'hidden', opacity: 0, x: -200 }}
             whileInView={{ visibility: 'visible', opacity: 1, x: 0 }}
@@ -66,14 +67,18 @@ const ThirdSection = () => {
               />
             </div>
           </motion.div>
-          <div className='relative text-center px-[30px] md:p-0 self-center'>
-            <motion.img
-              animate={{ y: [15, -15, 15] }}
-              transition={{ ease: "linear", duration: 5, repeat: Infinity }}
+          <motion.div
+            className='relative text-center px-[15px] h-full self-center pt-[50%] lg:py-0'
+            animate={{ y: [15, -15, 15] }}
+            transition={{ ease: "linear", duration: 5, repeat: Infinity }}
+          >
+            <Image
+              layout='fill'
               src='/mydrone3.png'
-              className='relative max-w-full w-auto text-center mx-auto mb-11 lg:mb-0'
+              alt='logo'
+              objectFit='scale-down'
             />
-          </div>
+          </motion.div>
         </div>
         <div className="mb-[55px] grid lg:grid-cols-2 gap-30px overflow-hidden">
           <motion.div

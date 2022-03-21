@@ -1,11 +1,18 @@
+import Image from 'next/image'
 import { forwardRef } from 'react'
 import { motion } from 'framer-motion'
 
 const HeroSection = forwardRef((_, ref) => {
   return (
     <section id='home' ref={ref}
-      className='relative pt-[189px] pb-[122px] md:pt-[185px] md:pb-[118px] bg-cover bg-center bg-no-repeat bg-hero'
+      className='relative pt-[189px] pb-[122px] md:pt-[185px] md:pb-[118px]'
     >
+      <Image
+        layout='fill'
+        src='/heroarea.jpg'
+        alt='logo'
+        objectFit='cover'
+      />
       <div className='absolute left-0 bottom-0 w-full
         before:absolute before:left-0 before:bottom-0 before:border-solid before:w-0 before:h-0
         before:border-r-[50vw] before:border-r-transparent 
@@ -28,11 +35,11 @@ const HeroSection = forwardRef((_, ref) => {
               />
             </div>
           </div>
-          <div className='basis-full w-full lg:basis-[50%] lg:max-w-[50%] px-[15px]'>
+          <div className='relative z-[2] basis-full w-full lg:basis-[50%] lg:max-w-[50%] px-[15px]'>
             <h1 className='mb-2 text-[30px] leading-[42px] font-bold text-white md:text-[48px] md:leading-[58px] xl:text-[56px] xl:leading-[66px] '>
               Best quality Drone for your daily life
             </h1>
-            <p className='relative z-[2] text-[18px] leading-[28px] mt-[26px] text-white'>
+            <p className='text-[18px] leading-[28px] mt-[26px] text-white'>
               Effects present letters inquiry no an removed or friends.
               Desire behind latter me though in. Supposing shameless am engrossed itatibus additions.
             </p>

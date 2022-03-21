@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { motion } from "framer-motion"
 import VideoModal from "../video_modal"
 
@@ -35,14 +36,19 @@ const ReasonSection = () => {
         </div>
         <div className="grid grid-cols-1 gap-[30px] lg:grid-cols-2 overflow-hidden">
           <motion.div
-            className="relative py-[243px] w-full h-full 
-              bg-reason bg-cover bg-no-repeat bg-center rounded-[5px] 
+            className="relative py-[243px] w-full h-full rounded-[5px] 
               after:absolute after:content-[''] after:top-0 after:left-0 after:w-full after:h-full
               after:bg-main after:opacity-50 lg:p-0"
             initial={{ visibility: 'hidden', opacity: 0, x: -200 }}
             whileInView={{ visibility: 'visible', opacity: 1, x: 0 }}
             transition={{ type: 'spring', stiffness: 60, duration: 1 }}
           >
+            <Image
+              layout='fill'
+              src='/video.jpg'
+              alt='logo'
+              objectFit='cover'
+            />
             <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[2]">
               <VideoModal />
             </div>
