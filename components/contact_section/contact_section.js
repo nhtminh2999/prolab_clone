@@ -93,7 +93,7 @@ const ContactSection = forwardRef((_, ref) => {
               whileInView={{ visibility: 'visible', opacity: 1, x: 0 }}
               transition={{ type: 'spring', stiffness: 60, duration: 1 }}
             >
-              <div className="relative bg-white h-full w-ful shadow-lg border-[10px] border-solid border-white">
+              <div className="relative bg-white h-full w-full shadow-lg border-[10px] border-solid border-white">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.787914417693!2d106.
                   71945375092317!3d10.827536111169792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
