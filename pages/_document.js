@@ -5,6 +5,7 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en" className='scroll-smooth'>
         <Head>
+          <meta name="description" content="Prolab land cloned by Nguyen Minh" />
           <link rel='icon' href='/favicon.png'></link>
           <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro/4cac1a6/css/all.css" rel="stylesheet"
             type="text/css" referrerPolicy="no-referrer" />
